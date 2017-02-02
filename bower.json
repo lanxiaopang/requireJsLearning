@@ -1,0 +1,27 @@
+{
+  "name": "requireJsLeaning",
+  "description": "for requireJs learning and tools such as npm grunt bower to use and the most important:build a project structure and use tools to manage dependences",
+  "main": "vendor",
+  "authors": [
+    "lanxiaopang <szy1944@hotmail.com>"
+  ],
+  "license": "yes",
+  "keywords": [
+    "requerJs"
+  ],
+  "homepage": "no",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "requirejs": "^2.3.2",
+    "es5-shim": "^4.5.9",
+    "json3": "^3.3.2"
+  }
+}
