@@ -74,5 +74,3 @@ bower install --save requirejs
 bower install --save jquery
 ```
 ##### 终于装完了依赖
-	
-		
