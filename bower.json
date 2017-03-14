@@ -23,6 +23,7 @@
     "requirejs": "^2.3.2",
     "es5-shim": "^4.5.9",
     "json3": "^3.3.2",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "lodash": "^4.17.4"
   }
 }
