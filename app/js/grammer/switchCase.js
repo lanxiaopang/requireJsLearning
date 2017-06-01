@@ -7,7 +7,6 @@ define(function () {
         switch (a) {
             case 1:
             case 2:
-            // 永远执行不到这里
             default:
                 console.log('default');
             case 3:
@@ -17,7 +16,7 @@ define(function () {
                 console.log('4');
 
         }
-    }
+    };
 });
 
 

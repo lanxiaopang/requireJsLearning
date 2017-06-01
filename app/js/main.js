@@ -1,26 +1,25 @@
-
 /**
  * Created by Administrator on 2017/2/3.
  */
 //
 define(function (require) {
-    var $ = require("jquery");
+    var $          = require("jquery");
     var regExpTest = require("js/regExpTest");
-    //var s = require("grammer/switchCase");
-    var u = require("underscore-use/underscoreUse");
-    //var l = require("lodash-use/lodashUse");
-    var _ = require("lodash");
+    var u          = require("underscore-use/underscoreUse");
+    var singleton  = require("designPattern/singletonPattern");
+    // var s = require("grammer/switchCase");
+    // var l = require("lodash-use/lodashUse");
+    // var _ = require("lodash");
     /**
      * 测试页面初始化是否可行
      */
-
+    
     function initTest() {
         $(document).ready(function () {
             alert("Congratulations!jquery loaded successfully!");
         });
     }
-
-
+    
     /**
      * 测试正则表达式
      */
@@ -37,14 +36,14 @@ define(function (require) {
             pattern2    = /[\w.]+\@[\w.]+\.[\w.]+/g,
             pattern3    = /[\w.]+\@[\w.]+\.\w+/g,
             out;
-
-
+        
+        
         out = regExpTest.arrMatch(arr, pattern);
         console.info(out);
-
+        
         regExpTest.multipleReturnPlace(pattern1, str);
-
-
+        
+        
         console.info(pattern3.exec(addressText));
         console.info(pattern3.test("supprot@forta.com."));
         regExpTest.multipleReturnPlace(pattern2, addressText);
@@ -52,43 +51,45 @@ define(function (require) {
         regExpTest.multipleReturnPlace(/a+/g, "caaaaaad");
         console.info(pattern2.exec(addressText));
     }
-
+    
     /**
      * switchcase 渗透测试
      */
-    function swithcaseTest(){
+    function swithcaseTest() {
         // s();
     }
-
+    
     /**
      * underscore用法测试
      */
     function underscoreUseTest() {
         var obj = {
-            name:"sun",
-            age:29,
-            hobbies:["play","code"],
-            experience:{
-                study:["senior","college","self"],
-                work:["loose","hard","harder"]
+            name: "sun",
+            age: 29,
+            hobbies: ["play", "code"],
+            experience: {
+                study: ["senior", "college", "self"],
+                work: ["loose", "hard", "harder"]
             }
         };
-        u.propertyUse(obj,"study");
+        u.propertyUse(obj, "study");
     }
-
-    function regExpUseTest(){
+    
+    function regExpUseTest() {
         var str = "123\123";
         regExpTest.checkNumCapsCharactor(str);
     }
-
-
-
+    
+    
     /**
      * 入口方法
      */
-    (function(){
+    (function () {
         //swithcaseTest();
         //underscoreUseTest();
         //u.reduceUse();
+        var person1 = singleton.getInstance("Wang");
+        var person2 = singleton.getInstance("Sun");
+        console.info(person1 === person2);
     })();
 });
