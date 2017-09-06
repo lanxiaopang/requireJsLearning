@@ -8,6 +8,7 @@ define(function (require) {
     var u          = require("underscore-use/underscoreUse");
     var singleton  = require("designPattern/singletonPattern");
     // var s = require("grammer/switchCase");
+    var c = require("grammer/consoleAsyc");
     // var l = require("lodash-use/lodashUse");
     // var _ = require("lodash");
     /**
@@ -80,7 +81,10 @@ define(function (require) {
         regExpTest.checkNumCapsCharactor(str);
     }
     
-    
+    function consoleTest(){
+        c();
+    }
+
     /**
      * 入口方法
      */
@@ -88,8 +92,9 @@ define(function (require) {
         //swithcaseTest();
         //underscoreUseTest();
         //u.reduceUse();
-        var person1 = singleton.getInstance("Wang");
-        var person2 = singleton.getInstance("Sun");
-        console.info(person1 === person2);
+        // var person1 = singleton.getInstance("Wang");
+        // var person2 = singleton.getInstance("Sun");
+        // console.info(person1 === person2);
+        consoleTest();
     })();
 });

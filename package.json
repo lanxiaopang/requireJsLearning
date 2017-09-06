@@ -10,5 +10,8 @@
     "regexp"
   ],
   "author": "Sunzhy",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint-plugin-html": "^2.0.3"
+  }
 }
