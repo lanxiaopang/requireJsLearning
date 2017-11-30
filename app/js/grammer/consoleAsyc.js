@@ -8,4 +8,4 @@ define(function () {
         console.log(obj);
         obj.foo = 'bar';
     };
-})
+});

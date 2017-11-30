@@ -1,29 +1,29 @@
 /**
  * Created by Administrator on 2017/2/3.
  */
-//
 define(function (require) {
-    var $          = require("jquery");
-    var regExpTest = require("js/regExpTest");
-    var u          = require("underscore-use/underscoreUse");
-    var singleton  = require("designPattern/singletonPattern");
+    // var $          = require("jquery");
+    // var regExpTest = require("js/regExpTest");
+    // var u          = require("underscore-use/underscoreUse");
+    // var singleton  = require("designPattern/singletonPattern");
     // var s = require("grammer/switchCase");
-    var c = require("grammer/consoleAsyc");
+    // var c = require("grammer/consoleAsyc");
     // var l = require("lodash-use/lodashUse");
     // var _ = require("lodash");
+    var t = require("grammer/traversalObjectExcerise");
+    
     /**
      * 测试页面初始化是否可行
      */
-    
-    function initTest() {
+    /*function initTest() {
         $(document).ready(function () {
             alert("Congratulations!jquery loaded successfully!");
         });
     }
     
-    /**
+    /!**
      * 测试正则表达式
-     */
+     *!/
     function reguarExpressionTest() {
         var arr         = ['cct', 'bat', 'cat', 'sat'],
             str         = "aatbatcattat",
@@ -53,16 +53,17 @@ define(function (require) {
         console.info(pattern2.exec(addressText));
     }
     
-    /**
+    /!**
      * switchcase 渗透测试
-     */
+     *!/
     function swithcaseTest() {
         // s();
     }
-    
+    */
+
     /**
      * underscore用法测试
-     */
+     *!/
     function underscoreUseTest() {
         var obj = {
             name: "sun",
@@ -75,7 +76,7 @@ define(function (require) {
         };
         u.propertyUse(obj, "study");
     }
-    
+    /*
     function regExpUseTest() {
         var str = "123\123";
         regExpTest.checkNumCapsCharactor(str);
@@ -83,7 +84,21 @@ define(function (require) {
     
     function consoleTest(){
         c();
+    }*/
+
+    /**
+     * 遍历 不同的 object
+     */
+    function traversalObject(){
+        var option = {
+            "810": {"001": "结婚810", "002": "家具810", "003": "买房810", "004": "装修810"},
+            "866": {"001": "结婚", "002": "家具", "003": "买房", "004": "装修"}
+        };
+        // console.info((t.wayOne(option,"866")));
+        console.info((t.wayTwo(option,"866")));
     }
+
+
 
     /**
      * 入口方法
@@ -95,6 +110,7 @@ define(function (require) {
         // var person1 = singleton.getInstance("Wang");
         // var person2 = singleton.getInstance("Sun");
         // console.info(person1 === person2);
-        consoleTest();
+        // consoleTest();
+        traversalObject();
     })();
 });
